@@ -1,11 +1,7 @@
 package com.example.demo;
 
 import com.example.configure.ApplicationConfig;
-import com.example.demo.controller.Message;
-import com.example.demo.controller.Notification;
-import com.example.demo.controller.Ring;
-import com.example.demo.controller.chat;
-import com.example.demo.controller.userPayment;
+import com.example.demo.controller.*;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,6 +21,15 @@ public class DemoApplication {
 		O.sms();
 		userPayment pay=context.getBean("userpayment",userPayment.class);
 		pay.payment();
+
+		orderplaced odr=context.getBean(orderplaced.class);
+		odr.order();
+		orderplaced odr1=context.getBean(orderplaced.class);
+		System.out.println(odr==odr1);
+
+//		MyBean bean=context.getBean("myBean",MyBean.class);
+//		bean.setBeanName("Deepak");
+
 	}
 
 }
