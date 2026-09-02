@@ -12,10 +12,11 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("com.example.demo.controller")
 
 public class AppConfig {
-    @Bean(value = "userpayment",initMethod = "start")
-    public userPayment pay(){
-        return new userPayment();
-    }
+//    @Bean(value = "userpayment",initMethod = "start")
+//    public userPayment pay(){
+//        System.out.println("UserPayment object creation start");
+//        return new userPayment();
+//    }
 
     @PostConstruct
     public void start(){

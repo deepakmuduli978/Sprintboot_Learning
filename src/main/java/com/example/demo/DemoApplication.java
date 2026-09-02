@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages="com.example.service")
 public class DemoApplication {
 
 	public static void main(String[] args) {
@@ -17,15 +17,15 @@ public class DemoApplication {
 //		SMS s=new SMS(dm);
 //		s.sms();
 //		ApplicationContext context=new AnnotationConfigApplicationContext(AppConfig.class);
-        SMS O=context.getBean(SMS.class);
-		O.sms();
-		userPayment pay=context.getBean("userpayment",userPayment.class);
-		pay.payment();
-
-		orderplaced odr=context.getBean(orderplaced.class);
-		odr.order();
-		orderplaced odr1=context.getBean(orderplaced.class);
-		System.out.println(odr==odr1);
+//        SMS O=context.getBean(SMS.class);
+//		O.sms();
+//		userPayment pay=context.getBean("userpayment",userPayment.class);
+//		pay.payment();
+//
+//		orderplaced odr=context.getBean(orderplaced.class);
+//		odr.order();
+//		orderplaced odr1=context.getBean(orderplaced.class);
+//		System.out.println(odr==odr1);
 
 //		MyBean bean=context.getBean("myBean",MyBean.class);
 //		bean.setBeanName("Deepak");
